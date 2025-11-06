@@ -1,4 +1,4 @@
-// Puppy Bowl - Smith Chad
+
 const BASE_URL = "https://fsa-puppy-bowl.herokuapp.com/api/2506-SMITHCHAD";
 const PLAYERS_URL = `${BASE_URL}/players`;
 
@@ -6,7 +6,7 @@ const playersContainer = document.getElementById("puppy-list");
 const detailsContainer = document.getElementById("details-container");
 const form = document.getElementById("puppy-form");
 
-// --- Fetch all players ---
+
 async function fetchAllPlayers() {
   try {
     const response = await fetch(PLAYERS_URL);
@@ -17,7 +17,7 @@ async function fetchAllPlayers() {
   }
 }
 
-// --- Fetch single player ---
+
 async function fetchSinglePlayer(id) {
   try {
     const response = await fetch(`${PLAYERS_URL}/${id}`);
@@ -28,7 +28,6 @@ async function fetchSinglePlayer(id) {
   }
 }
 
-// --- Add new player ---
 async function addNewPlayer(name, breed) {
   try {
     const defaultImage = "https://learndotresources.s3.amazonaws.com/workshop/60ad725bbe74cd0004a6cba0/puppybowl-default-dog.png";
@@ -44,7 +43,7 @@ async function addNewPlayer(name, breed) {
   }
 }
 
-// --- Remove player ---
+
 async function removePlayer(id) {
   try {
     await fetch(`${PLAYERS_URL}/${id}`, { method: "DELETE" });
@@ -53,7 +52,7 @@ async function removePlayer(id) {
   }
 }
 
-// --- Render players list ---
+
 async function renderAllPlayers() {
   const players = await fetchAllPlayers();
   playersContainer.innerHTML = "";
@@ -76,7 +75,7 @@ async function renderAllPlayers() {
   });
 }
 
-// --- Render single player details ---
+
 function renderSinglePlayer(player) {
   detailsContainer.innerHTML = `
     <img src="${player.imageUrl}" alt="${player.name}" />
@@ -96,7 +95,7 @@ function renderSinglePlayer(player) {
   });
 }
 
-// --- Handle form submission ---
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const name = form.name.value.trim();
@@ -108,5 +107,4 @@ form.addEventListener("submit", async (e) => {
   renderAllPlayers();
 });
 
-// --- Initial render ---
 renderAllPlayers();
