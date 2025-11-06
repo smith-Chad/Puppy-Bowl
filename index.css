@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+#players-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.player-card {
+  border: 1px solid #ccc;
+  background-color: white;
+  border-radius: 8px;
+  padding: 10px;
+  width: 150px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.player-card:hover {
+  background-color: #eaf6ff;
+}
+
+.player-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+#details-container img {
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+form input {
+  margin: 5px;
+  padding: 8px;
+}
+
+button {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #007acc;
+}
