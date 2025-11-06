@@ -1,6 +1,6 @@
 # Puppy Bowl 🐶🏈
 Welcome to the Puppy Bowl Admin App!  
-Built by **Smith Chad** for cohort `2506-SMITHCHAD`.
+Built by **Smith Chad** for cohort `2510-SMITHCHAD`.
 
 This web app lets you:
 - View all puppies from the Puppy Bowl API
